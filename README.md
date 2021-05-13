@@ -46,3 +46,5 @@ After you clone this repo to your desktop, go to its root directory and run `npm
 Once the dependencies are installed, you can run  `npm start` to start the application. You will then be able to access it at localhost:3000
 
 You need to fill in Display name and Room name, so that you can enter the room chat. You can open another tab in the browser to enter the same room to chat.
+
+test
