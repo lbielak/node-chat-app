@@ -8,21 +8,20 @@ pipeline {
             }
         }
     }
-
-    post {
+post {
         failure {
             emailext attachLog: true,
-                body: "test1",
+                body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
                 recipientProviders: [developers(), requestor()],
-                to: 'ukaszbielak@gmail.com',
-                subject: "build failed"
+                to: 'karolc3dro@gmail.com',
+                subject: "Test failed : Job ${env.JOB_NAME}"
         }
         success {
             emailext attachLog: true,
-                body: "test",
+                body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
                 recipientProviders: [developers(), requestor()],
-                to: 'ukaszbielak@gmail.com',
-                subject: "build successful"
+                to: 'karolc3dro@gmail.com',
+                subject: "Test successful : Job ${env.JOB_NAME}"
         }
-    }
-}
+        }
+        }
