@@ -13,14 +13,14 @@ post {
             emailext attachLog: true,
                 body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
                 recipientProviders: [developers(), requestor()],
-                to: 'karolc3dro@gmail.com',
+                to: 'ukaszbielak@gmail.com',
                 subject: "Test failed : Job ${env.JOB_NAME}"
         }
         success {
             emailext attachLog: true,
                 body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
                 recipientProviders: [developers(), requestor()],
-                to: 'karolc3dro@gmail.com',
+                to: 'ukaszbielak@gmail.com',
                 subject: "Test successful : Job ${env.JOB_NAME}"
         }
         }
